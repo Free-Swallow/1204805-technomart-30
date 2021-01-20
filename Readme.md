@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Николай Егоров](https://up.htmlacademy.ru/htmlcss/30/user/1204805).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
 
 ---
 

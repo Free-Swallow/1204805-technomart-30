@@ -27,12 +27,35 @@
   --black: #000000;
 }
 
+.page {
+  height: 100%;
+}
+
 .page-body {
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-conten 1fr min-conten;
+}
+
+.header {
+  background-color: var(--light-white2);
 }
 
 /*top-header*/
+
+.top-header-container {
+  background-color: var(--main-color);
+}
+
+.top-header-container-position {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 .main-header {
    color: var(--white);
@@ -41,7 +64,15 @@
    font-family: "Cuprum", Arial, sans-serif;
 }
 
-.manege-orders--button {
+.manege-orders {
+  justify-self: end;
+}
+
+.manege-orders-list {
+  list-style: none;
+}
+
+.manege-orders-button {
   background-color: var(--main-color);
   color: var(--white);
   text-decoration: none;
@@ -63,7 +94,16 @@
 
 /*middle-header*/
 
-.main-title--item {
+.middle-header-container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.main-title {
   color: var(--red);
   font-family: "Cuprum", Arial, sans-serif;
   font-style: italic;
@@ -72,20 +112,24 @@
   font-weight: 400;
 }
 
-.main-header-contacts--phone {
+.header-contacts-phone {
   color: var(--red);
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
 }
 
-.main-header-contacts--address {
+.header-address {
   font-size: 14px;
   line-height: 24px;
   color: var(--main-color-l);
 }
 
-.user-menu--link {
+.user-menu {
+
+}
+
+.user-menu-link {
   color: var(--black);
   background-color: var(--white);
   text-decoration: none;
@@ -93,11 +137,11 @@
   line-height: 21px;
 }
 
-.user-menu--link:hover, .user-menu--link:focus {
+.user-menu-link:hover, .user-menu-link:focus {
   color: var(--red);
 }
 
-.user-menu--link:active {
+.user-menu-link:active {
   color: var(--grey);
 }
 
@@ -106,9 +150,16 @@
 .main-nav {
   background-color: var(--main-color-l);
   border-bottom: 5px solid var(--main-color);
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.main-nav--link {
+.main-nav-list {
+  list-style: none;
+}
+
+.main-nav-link {
   color: var(--white);
   text-decoration: none;
   font-size: 18px;
@@ -116,24 +167,35 @@
   line-height: 24px;
 }
 
-.main-nav--link:hover, .main-nav--link:focus {
+.main-nav-link:hover, .main-nav-link:focus {
   background-color: var(--main-color);
 }
 
-.main-nav--link:active {
+.main-nav-link:active {
   background-color: var(--main-active);
 }
 
 /*main*/
 
-.main-menu--title {
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards-title {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
 }
 
-.main-menu--link {
+.cards-link {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -143,7 +205,7 @@
   color: var(--white);
 }
 
-.main-menu-slider--title {
+.slider-title {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
@@ -152,7 +214,7 @@
   /*color: var(--white);*/
 }
 
-.main-menu-slider--paragraph {
+.slider-par {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -178,17 +240,7 @@
   background-color: var(--dark-red);
 }
 
-.popular-product-header--title {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 30px;
-  line-height: 30px;
-  color: var(--main-color-l);
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-.popular-brands-header--title {
-  font-family: "Cuprum", Arial, sans-serif;
+.leaflet-title {
   font-size: 30px;
   line-height: 30px;
   color: var(--main-color-l);
@@ -198,7 +250,7 @@
 
 /*Преимущества*/
 
-.advantages-services--title {
+.advantages-services-title {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -207,7 +259,7 @@
   font-weight: 400;
 }
 
-.advantages-services--slider-title {
+.advantages-services-slider-title {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -216,7 +268,7 @@
   font-weight: 400;
 }
 
-.advantages-services--paragraph {
+.advantages-services-par {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -226,7 +278,7 @@
 
 /*О компании*/
 
-.about-company--title {
+.about-company-title {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
@@ -234,21 +286,21 @@
   text-transform: uppercase;
 }
 
-.about-company-paragraph {
+.about-company-par {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.about-company--item {
+.tk-item {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.about-company--button{
+.about-company-button{
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -258,29 +310,29 @@
   font-weight: 400;
 }
 
-.about-company--button:hover, .about-company--button:focus {
+.about-company-button:hover, .about-company-button:focus {
   background-color: var(--darkened-red);
 }
 
-.about-company--button:active {
+.about-company-button:active {
   background-color: var(--dark-red);
 }
 
-.contact-map--title {
+.contact-map-title {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
 }
 
-.contact-map--paragraph {
+.contact-map-par {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.contact-map--button {
+.contact-map-button {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -290,11 +342,11 @@
   font-weight: 400;
 }
 
-.contact-map--button:hover, .contact-map--button:focus {
+.contact-map-button:hover, .contact-map-button:focus {
   background-color: var(--darkened-red);
 }
 
-.contact-map--button:active {
+.contact-map-button:active {
   background-color: var(--dark-red);
 }
 
@@ -306,96 +358,96 @@
   color: var(--white);
 }
 
-.footer-nav--link-up {
+.footer-nav-link-up {
   font-size: 18px;
   line-height: 24px;
   color: var(--light-white2);
   text-decoration: none;
 }
 
-.footer-nav--link-up:hover, .footer-nav--link-up:focus {
+.footer-nav-link-up:hover, .footer-nav-link-up:focus {
   text-decoration: underline;
 }
 
-.footer-nav--link-up:active {
+.footer-nav-link-up:active {
   opacity: 0.5;
 }
 
-.footer-nav--link-down {
+.footer-nav-link-down {
   font-size: 18px;
   line-height: 24px;
   color: var(--light-yellow);
   text-decoration: none;
 }
 
-.footer-nav--link-down:hover, .footer-nav--link-down:focus {
+.footer-nav-link-down:hover, .footer-nav-link-down:focus {
   text-decoration: underline;
 }
 
-.footer-nav--link-down:active {
+.footer-nav-link-down:active {
   opacity: 0.5;
 }
 
-.copyright--paragraph {
+.copyright-par {
   font-size: 16px;
   line-height: 18px;
 }
 
-.com-with-developers--paragraph {
+.com-with-developers-par {
   color: var(--white);
   font-size: 16px;
   line-height: 18px;
 }
 
-.com-with-developers--link {
+.com-with-developers-link {
   color: var(--light-yellow);
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
 }
 
-.com-with-developers--link:hover, .com-with-developers--link:focus {
+.com-with-developers-link:hover, .com-with-developers-link:focus {
   text-decoration: underline;
 }
 
-.com-with-developers--link:active {
+.com-with-developers-link:active {
   color: var(--red);
   text-decoration: none;
 }
 
 /*Каталог хедер*/
 
-.manege-orders--button--active {
+.manege-orders-button-active {
   background-color: var(--red);
   color: var(--white);
   text-decoration: none;
 }
 
-.user-menu--user-name {
+.user-menu-user-name {
   font-size: 21px;
   line-height: 21px;
   text-decoration: none;
   color: var(--black);
 }
 
-.user-menu--link--active {
+.user-menu-link-active {
   font-size: 16px;
   line-height: 18px;
   color: var(--main-color-l);
   text-decoration: none;
 }
 
-.user-menu--link--active:hover, .user-menu--link--active:focus {
+.user-menu-link-active:hover, .user-menu-link-active:focus {
   color: var(--red);
 }
 
-.user-menu--link--active:active {
+.user-menu-link-active:active {
   color: var(--grey);
 }
 
 /*Мэин*/
 
-.breadcrumbs-item--link {
+.breadcrumbs-item-link {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -417,32 +469,32 @@
   text-transform: uppercase;
 }
 
-.block-filter--title {
+.filter-title {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
 }
 
-.block-filter--subtitle {
+.filter-subtitle {
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
 }
 
-.block-filter--item {
+.filter-item {
   font-size: 15px;
   line-height: 19px;
   font-weight: 400;
 }
 
-.block-filter--button {
+.filter-button {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   font-family: "PT Sans", Arial,sans-serif;
 }
 
-.products-navigation--title {
+.products-nav-title {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -450,7 +502,7 @@
 }
 
 
-.products-navigation--item-link {
+.products-nav-link {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -461,19 +513,19 @@
   border-bottom: dotted 1px var(--red);
 }
 
-.products-navigation--item-link:hover, .products-navigation--item-link:focus {
+.products-nav-link:hover, .products-nav-link:focus {
   opacity: 1;
   border-bottom: solid 1px var(--red);
 }
 
 
-.products-navigation--item-link--active {
+.products-nav-link-active {
   color: var(--red);
   border: none;
   opacity: 1;
 }
 
-.page-navigation--item-link {
+.page-nav-link {
   text-decoration: none;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -483,27 +535,27 @@
   border: solid 1px var(--grey2);
 }
 
-.page-navigation--item-link:hover, .page-navigation--item-link:focus {
+.page-nav-link:hover, .page-nav-link:focus {
   border-color: var(--grey);
 }
 
-.page-navigation--item-link:active {
+.page-nav-link:active {
   border-color: var(--red);
 }
 
-.page-navigation--item-link--active {
+.page-nav-link-active {
   background-color: var(--red);
   color: var(--white);
 }
 
-.about-products--title {
+.about-products-title {
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.about-products--paragraph {
+.about-products-par {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -512,7 +564,7 @@
 
 /*Карточка товара*/
 
-.card-product--link {
+.card-product-link {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -521,7 +573,7 @@
   text-decoration: none;
 }
 
-.card-product--old-price {
+.card-product-old-price {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -530,14 +582,14 @@
   text-decoration: line-through;
 }
 
-.card-product--new-price {
+.card-product-new-price {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
 }
 
-.card-product--buy {
+.card-product-buy {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -548,15 +600,15 @@
   font-weight: 400;
 }
 
-.card-product--buy:hover, .card-product--buy:focus {
+.card-product-buy:hover, .card-product-buy:focus {
   background-color: var(--light-green2);
 }
 
-.card-product--buy:active {
+.card-product-buy:active {
   background-color: var(--dark-green);
 }
 
-.card-product--bookmarks {
+.card-product-bookmarks {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -567,10 +619,10 @@
   font-weight: 400;
 }
 
-.card-product--bookmarks:hover, .card-product--bookmarks:focus {
+.card-product-bookmarks:hover, .card-product-bookmarks:focus {
   border-color: var(--main-color-l);
 }
 
-.card-product--bookmarks:active {
+.card-product-bookmarks:active {
   opacity: 0.5;
 }

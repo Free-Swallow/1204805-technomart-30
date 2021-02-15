@@ -39,6 +39,15 @@
   grid-template-rows: min-conten 1fr min-conten;
 }
 
+
+.position-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+
 .header {
   background-color: var(--light-white2);
 }
@@ -178,6 +187,9 @@
 /*main*/
 
 .container {
+}
+
+.main-cards {
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
@@ -186,6 +198,26 @@
 .cards-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards-material {
+  background-color: var(--mustard1);
+}
+
+.cards-tools {
+  background-color: var(--ocean);
+}
+
+.cards-technic {
+  background-color: var(--light-purpple);
+}
+
+.cards-discount {
+  background-color: var(--light-green);
+}
+
+.cards-delivery {
+  background-color: var(--mustard2);
 }
 
 .cards-title {
@@ -240,6 +272,22 @@
   background-color: var(--dark-red);
 }
 
+.leaflet-popular-product {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.leaflet-popular-brands {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.leaflet-header {
+  background-color: var(--light-brown);
+}
+
 .leaflet-title {
   font-size: 30px;
   line-height: 30px;
@@ -249,6 +297,16 @@
 }
 
 /*Преимущества*/
+
+.advantages {
+  background-color: var(--light-white2);
+}
+
+.advantages-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
 .advantages-services-title {
   font-family: "Cuprum", Arial, sans-serif;
@@ -277,6 +335,12 @@
 }
 
 /*О компании*/
+
+.about-us {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
 .about-company-title {
   font-family: "Cuprum", Arial, sans-serif;
@@ -350,12 +414,28 @@
   background-color: var(--dark-red);
 }
 
-/*header*/
+/*footer*/
+
+.footer-up-wrapper {
+  background-color: var(--main-color-l);
+}
+
+.footer-down-wrapper {
+  background-color: var(--main-color);
+}
 
 .footer-address {
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
+}
+
+.footer-nav-list-up {
+  list-style: none;
+}
+
+.footer-nav-list-down {
+  list-style: none;
 }
 
 .footer-nav-link-up {
@@ -389,6 +469,7 @@
 }
 
 .copyright-par {
+  color: var(--white);
   font-size: 16px;
   line-height: 18px;
 }
@@ -548,6 +629,10 @@
   color: var(--white);
 }
 
+.about-products {
+  background-color: var(--light-white2);
+}
+
 .about-products-title {
   font-size: 30px;
   line-height: 30px;
@@ -626,3 +711,4 @@
 .card-product-bookmarks:active {
   opacity: 0.5;
 }
+

@@ -32,7 +32,7 @@
 }
 
 .page-body {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
   min-height: 100%;
   display: grid;
@@ -63,31 +63,36 @@
   margin: 0 auto;
   padding: 0 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .main-header {
    color: var(--white);
    font-size: 18px;
    line-height: 24px;
-   font-family: "Cuprum", Arial, sans-serif;
+   font-family: "Cuprum", "Arial", sans-serif;
 }
 
-.manege-orders {
+.logo-search-wrapper {
+  display: flex;
+}
+
+.manage-orders {
   justify-self: end;
 }
 
-.manege-orders-list {
+.manage-orders-list {
   list-style: none;
+  display: flex;
 }
 
-.manege-orders-button {
+.manage-orders-button {
   background-color: var(--main-color);
   color: var(--white);
   text-decoration: none;
 }
 
-.manege-bookmarks:active {
+.manage-bookmarks:active {
   background-color: var(--main-color-d);
 }
 
@@ -107,18 +112,27 @@
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-wrapper {
+  width: 200px;
+  padding-left: 30px;
+  padding-top: 30px;
 }
 
 .main-title {
   color: var(--red);
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
   font-weight: 400;
+}
+
+.header-contacts {
+  padding-top: 41px;
 }
 
 .header-contacts-phone {
@@ -135,7 +149,7 @@
 }
 
 .user-menu {
-
+  padding-top: 41px;
 }
 
 .user-menu-link {
@@ -160,12 +174,16 @@
   background-color: var(--main-color-l);
   border-bottom: 5px solid var(--main-color);
   width: 940px;
-  margin: 0 auto;
+  height: 60px;
+  margin: 0 auto 60px;
   padding: 0 10px;
 }
 
 .main-nav-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .main-nav-link {
@@ -186,49 +204,71 @@
 
 /*main*/
 
-.container {
-}
-
 .main-cards {
+  height: auto;
   width: 940px;
-  margin: 0 auto;
+  margin: 60px auto 60px;
   padding: 0 10px;
 }
 
 .cards-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding-left: 0;
 }
+
+.cards-item {
+  list-style: none;
+  width: 300px;
+  height: 123px;
+}
+
 
 .cards-material {
   background-color: var(--mustard1);
+  display: flex;
+  justify-content: space-around;
 }
 
 .cards-tools {
   background-color: var(--ocean);
+  display: flex;
+  justify-content: space-around;
 }
 
 .cards-technic {
   background-color: var(--light-purpple);
+  display: flex;
+  justify-content: space-around;
 }
 
 .cards-discount {
   background-color: var(--light-green);
+  display: flex;
+  justify-content: space-around;
 }
 
 .cards-delivery {
   background-color: var(--mustard2);
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-image {
+  margin: 0 auto;
 }
 
 .cards-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  color: var(--white);
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
 }
 
 .cards-link {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -237,25 +277,36 @@
   color: var(--white);
 }
 
+.slider {
+  background-image: url(../img/sl/layer99-2xpref.jpg);
+  list-style: none;
+  width: 620px;
+  height: 266px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
 .slider-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  /*color: var(--white);*/
+  color: var(--white);
 }
 
 .slider-par {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-  /*color: var(--white);*/
+  color: var(--white);
 }
 
 .button {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   background-color: var(--red);
@@ -278,6 +329,18 @@
   padding: 0 10px;
 }
 
+.popular-product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+ }
+
+.popular-brands-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+
 .leaflet-popular-brands {
   width: 940px;
   margin: 0 auto;
@@ -286,6 +349,8 @@
 
 .leaflet-header {
   background-color: var(--light-brown);
+  display: flex;
+  justify-content: space-between;
 }
 
 .leaflet-title {
@@ -309,7 +374,7 @@
 }
 
 .advantages-services-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -318,7 +383,7 @@
 }
 
 .advantages-services-slider-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -327,7 +392,7 @@
 }
 
 .advantages-services-par {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
@@ -340,10 +405,16 @@
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-company {
+  max-width: 460px;
 }
 
 .about-company-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
@@ -351,21 +422,21 @@
 }
 
 .about-company-par {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
 }
 
 .tk-item {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
 
 .about-company-button{
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   background-color: var(--red);
@@ -382,22 +453,27 @@
   background-color: var(--dark-red);
 }
 
+.contact-map {
+  width: 320px;
+}
+
 .contact-map-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
 }
 
 .contact-map-par {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
 }
 
+
 .contact-map-button {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   background-color: var(--red);
@@ -424,18 +500,29 @@
   background-color: var(--main-color);
 }
 
+.footer-top-part, .footer-middle-part {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.footer-nav-list-up {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
 .footer-address {
+  width: 340px;
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
 }
 
-.footer-nav-list-up {
-  list-style: none;
-}
 
 .footer-nav-list-down {
   list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer-nav-link-up {
@@ -468,6 +555,14 @@
   opacity: 0.5;
 }
 
+.footer-down-part {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
 .copyright-par {
   color: var(--white);
   font-size: 16px;
@@ -498,10 +593,20 @@
 
 /*Каталог хедер*/
 
-.manege-orders-button-active {
+.manage-orders-button-active {
   background-color: var(--red);
   color: var(--white);
   text-decoration: none;
+}
+
+.user-menu-authorized {
+  width: 300px;
+  padding-top: 41px;
+  padding-right: 0;
+  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .user-menu-user-name {
@@ -509,6 +614,10 @@
   line-height: 21px;
   text-decoration: none;
   color: var(--black);
+  width: 299px;
+  height: 45px;
+  background-color: var(--white);
+  text-align: center;
 }
 
 .user-menu-link-active {
@@ -528,16 +637,44 @@
 
 /*Мэин*/
 
+
+.breadcrumbs-list {
+  padding-left: 0;
+  padding-top: 20px;
+  margin-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+
+}
+
+.breadcrumbs-item {
+  padding-left: 40px;
+}
+
+.breadcrumbs-item:first-child {
+  padding-left: 0;
+}
+
 .breadcrumbs-item-link {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
+  font-weight: 400;
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--black);
 }
 
+.catalog-page-title-wrapper {
+  background-color: var(--light-white2);
+  width: 100%;
+  height: 89px;
+}
+
 .page-title {
+  padding-top: 29px;
+  padding-left: 29px;
   font-size: 30px;
   line-height: 30px;
   color: var(--main-color-l);
@@ -545,8 +682,14 @@
   font-weight: 400;
 }
 
+.main-catalog-wrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 20px;
+}
+
 .block-filter {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
@@ -572,11 +715,26 @@
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
-  font-family: "PT Sans", Arial,sans-serif;
+  font-family: "PT Sans", "Arial",sans-serif;
+}
+
+.products-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.products-nav-item {
+  padding-right: 40px;
 }
 
 .products-nav-title {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -584,7 +742,7 @@
 
 
 .products-nav-link {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-decoration: none;
@@ -606,9 +764,23 @@
   opacity: 1;
 }
 
+.page-nav-list {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.page-nav-item {
+  padding-left: 10px;
+}
+
+.page-nav-item:first-child {
+  padding-left: 0;
+}
+
 .page-nav-link {
   text-decoration: none;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -629,11 +801,21 @@
   color: var(--white);
 }
 
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 18px;
+  list-style: none;
+}
+
 .about-products {
   background-color: var(--light-white2);
+  height: 261px;
 }
 
 .about-products-title {
+  padding-top: 64px;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -641,7 +823,7 @@
 }
 
 .about-products-par {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -650,7 +832,7 @@
 /*Карточка товара*/
 
 .card-product-link {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
@@ -659,7 +841,7 @@
 }
 
 .card-product-old-price {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
@@ -668,14 +850,14 @@
 }
 
 .card-product-new-price {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
 }
 
 .card-product-buy {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   background-color: var(--green);
@@ -694,7 +876,7 @@
 }
 
 .card-product-bookmarks {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: var(--main-color-l);
@@ -711,4 +893,3 @@
 .card-product-bookmarks:active {
   opacity: 0.5;
 }
-

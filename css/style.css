@@ -98,7 +98,6 @@
   padding-top: 8px;
   text-decoration: none;
   left: -10px;
-  cursor: default;
 }
 
 .logo-link:active {
@@ -184,7 +183,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  cursor: default;
 }
 
 .manage-orders-button:active {
@@ -248,7 +246,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  cursor: default;
 }
 
 .button-order:hover, .button-order:focus {
@@ -342,7 +339,6 @@
   font-size: 21px;
   line-height: 21px;
   margin-left: 10px;
-  cursor: default;
 }
 
 .user-menu-link:hover, .user-menu-link:focus {
@@ -405,7 +401,6 @@
   padding-right: 24px;
   padding-bottom: 20px;
   padding-left: 24px;
-  cursor: default;
 }
 
 .main-nav-link:hover, .main-nav-link:focus {
@@ -422,7 +417,6 @@
   height: auto;
   width: 940px;
   margin: 60px auto;
-  /*padding: 0 10px;*/
 }
 
 .cards-list {
@@ -513,7 +507,6 @@
   background-color: var(--transparent-white);
   width: 138px;
   text-align: center;
-  cursor: default;
 }
 
 .cards-link:hover, .cards-link:focus {
@@ -526,7 +519,6 @@
 
 .slider {
   position: relative;
-  background-image: url(../img/sl/layer99-2x.jpg);
   background-color: var(--grey);
   list-style: none;
   width: 620px;
@@ -537,7 +529,24 @@
   grid-row-end: 4;
 }
 
-.slider-title {
+.slides {
+  display: none;
+  background-color: var(--grey);
+  height: 266px;
+}
+
+.slides-active {
+  display: block;
+}
+
+.slider-text {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 4px;
+}
+
+.slider-text h2 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
@@ -549,7 +558,7 @@
   margin-bottom: 0;
 }
 
-.slider-par {
+.slider-text p {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -582,6 +591,10 @@
 .button-slider {
   margin-top: 94px;
   margin-left: 23px;
+  position: absolute;
+  content: "";
+  bottom: 28px;
+  left: 4px;
 }
 
 .toggle-slider {
@@ -623,7 +636,6 @@
   height: 38px;
   text-align: center;
   padding-top: 10px;
-  cursor: default;
 }
 
 .button:hover, .button:focus {
@@ -656,7 +668,6 @@
 .leaflet-popular-brands {
   width: 940px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .leaflet-header {
@@ -726,7 +737,6 @@
   width: 220px;
   height: 145px;
   border: 1px solid var(--grey3);
-  cursor: default;
 }
 
 .brand-link:hover, .brand-link:focus {
@@ -749,7 +759,6 @@
   grid-template-columns: repeat(2, 1fr);
   width: 940px;
   margin: 0 auto;
-
 }
 
 .advantages-services {
@@ -779,7 +788,6 @@
   margin-bottom: 99px;
   position: relative;
   list-style: none;
-  cursor: default;
 }
 
 .advantages-slider-list::before {
@@ -825,6 +833,7 @@
   font-weight: 700;
   text-align: left;
   padding-left: 22px;
+  cursor: pointer;
 }
 
 .advantages-services-slider-button-active {
@@ -898,6 +907,7 @@
   text-align: center;
   padding-top: 0;
   margin-top: 17px;
+  cursor: pointer;
 }
 
 /*О компании*/
@@ -1070,7 +1080,6 @@
   line-height: 24px;
   color: var(--light-white2);
   text-decoration: none;
-  cursor: default;
 }
 
 .footer-nav-item-up {
@@ -1134,7 +1143,6 @@
   line-height: 24px;
   color: var(--light-yellow);
   text-decoration: none;
-  cursor: default;
 }
 
 .footer-nav-link-down:hover, .footer-nav-link-down:focus {
@@ -1169,10 +1177,6 @@
   margin-left: 40px;
 }
 
-.social-net a {
-  cursor: default;
-}
-
 .net-link:hover .svg-net {
   fill: var(--red);
 }
@@ -1197,7 +1201,6 @@
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
-  cursor: default;
 }
 
 .com-with-developers-link:hover, .com-with-developers-link:focus {
@@ -1232,10 +1235,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-.user-menu-authorized a {
-  cursor: default;
 }
 
 .user-menu-authorized::before {
@@ -1528,7 +1527,7 @@
 
 .filter-item {
   display: block;
-  cursor: default;
+  cursor: pointer;
   user-select: none;
   font-size: 15px;
   line-height: 19px;
@@ -1735,10 +1734,6 @@
   width: 400px;
 }
 
-.products-nav-item a {
-  cursor: default;
-}
-
 .product-nav-button {
   margin-top: 10px;
   margin-right: 17px;
@@ -1748,10 +1743,6 @@
 
 .product-nav-button li {
   display: inline-block;
-}
-
-.product-nav-button li a {
-  cursor: default;
 }
 
 .button-down {
@@ -1835,7 +1826,6 @@
   color: var(--black);
   border: solid 1px var(--grey2);
   border-radius: 3px;
-  cursor: default;
 }
 
 .page-nav-link-next {
@@ -1995,10 +1985,6 @@
   display: none;
 }
 
-.card-product-hidden-container a {
-  cursor: default;
-}
-
 .card-product:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -2070,7 +2056,7 @@
 /*Попапы*/
 
 .popup-contact {
-  /*display: none;*/
+  display: none;
   font-size: 18px;
   line-height: 24px;
   position: fixed;
@@ -2151,7 +2137,7 @@
   content: "";
   right: 6px;
   top: 11px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .button-popup-close:hover path {
@@ -2164,6 +2150,7 @@
   width: 460px;
   padding-top: 0;
   display: block;
+  cursor: pointer;
 }
 
 /*Попап карта*/
@@ -2245,7 +2232,6 @@
   height: 38px;
   text-align: center;
   padding-top: 10px;
-  cursor: default;
 }
 
 .popup-succes-link:hover, .popup-succes-link:focus {
